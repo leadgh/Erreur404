@@ -1,6 +1,9 @@
 @import "variables";
 @import "mixins";
 
+// id = .
+//div = #
+
 html ,body {
     margin : 0;
     font-family: 'Montserrat', sans-serif;
@@ -19,8 +22,8 @@ html ,body {
     height: $navheigt;
     padding-top: 10px;
     padding-bottom: 10px;
-    color:$nav-txtcolor ;
-    background: $nav-bgcolor;
+    color: $txtcolor ;
+    background: $bgcolor;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -28,14 +31,14 @@ html ,body {
 
 //SideNav
 
-  .sidenav {
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: $bgcolor;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -45,13 +48,8 @@ html ,body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
   }
   
   .sidenav .closebtn {
@@ -66,20 +64,29 @@ html ,body {
   padding: 20px;
 }
 
-  //section  
-  #error {
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    position: relative;
-    text-align: center;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+
+//section  
+#error {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+
+//image
+#astronaute{
+  width: $astrowdth;
+  height: $astrohgh;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
