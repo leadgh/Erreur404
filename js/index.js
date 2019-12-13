@@ -22,11 +22,13 @@ if(window.innerWidth > 940){
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 }
+var style = document.getElementById("loader").style.display;
 //Fermer la sidenav
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
+  document.getElementById("loader").style.display ="none";
 }
 
 animate = true;
@@ -41,3 +43,13 @@ function animation(){
   }
   animate = !animate;
 }
+
+//loader
+function anim(){
+  document.getElementById("loader").style.display ="block";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+//window.onclick = end;
+//function end() {
+//  document.getElementById("loader").style.display ="none";
+//}
